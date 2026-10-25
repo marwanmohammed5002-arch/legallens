@@ -4,16 +4,19 @@ import './MainLayout.css'
 function MainLayout() {
   return (
     <div className="layout">
+      <aside className="sidebar">
+        <div className="sidebar-brand">LegalLens AI</div>
+        <nav className="sidebar-nav">
+          <NavLink to="/" end>الرئيسية</NavLink>
+          <NavLink to="/history">سجل العقود</NavLink>
+          <NavLink to="/chat">المساعد الذكي</NavLink>
+          <NavLink to="/profile">حسابي</NavLink>
+        </nav>
+      </aside>
+
       <main className="layout-content">
         <Outlet />
       </main>
-
-      <nav className="bottom-nav">
-        <NavLink to="/" end>الرئيسية</NavLink>
-        <NavLink to="/history">السجل</NavLink>
-        <NavLink to="/chat">المساعد</NavLink>
-        <NavLink to="/profile">حسابي</NavLink>
-      </nav>
     </div>
   )
 }
