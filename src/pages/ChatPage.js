@@ -76,11 +76,6 @@ function ChatPage() {
     }
   }
 
-  function clearChat() {
-    setMessages([welcomeMessage])
-    setError(null)
-  }
-
   function handleSubmit(e) {
     e.preventDefault()
     sendMessage(input)
@@ -88,12 +83,7 @@ function ChatPage() {
 
   return (
     <div className="chat-page">
-      <div className="chat-header">
-        <h2 className="chat-title">المساعد الذكي</h2>
-        <button type="button" className="chat-clear" onClick={clearChat}>
-          مسح المحادثة
-        </button>
-      </div>
+      <h2 className="chat-title">المساعد الذكي</h2>
 
       <div className="chat-messages">
         {messages.map((msg) => (
